@@ -49,7 +49,76 @@ ctaImg.src = siteContent['cta']['img-src'];
 
 const nav = document.querySelectorAll('a');
 nav.forEach((element, index) => {
-  element.textContent = siteContent['nav'][`nav-item-${index + 1}`];  
+  element.textContent = siteContent['nav'][`nav-item-${index + 1}`]; 
+  element.style.color ="green"; 
 });
 
+let newContent = document.createElement('a');
+newContent.textContent ="Blog";
+newContent.style.display = "inherit";
+newContent.style.color = 'green';
+nav[5].appendChild(newContent);
 
+let newNav = document.createElement('a');
+newNav.textContent = "Login";
+newNav.style.color = 'green';
+newNav.style.display = "inherit";
+nav[0].prepend(newNav);
+
+
+
+const ctaHeading = document.querySelector('h1');
+ctaHeading.textContent = siteContent.cta.h1;
+ctaHeading.style.width = "170px";
+ctaHeading.style.marginRight = "150px";
+ctaHeading.style.color = "#186C17"
+
+const header = document.querySelector('header');
+header.style.background = "#08CBFA";
+
+
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+ctaButton.style.background = "#186C17";
+ctaButton.style.marginRight = "100px";
+ctaButton.style.color ="white";
+
+const textHeading = document.querySelectorAll('h4');
+textHeading[0].textContent = siteContent["main-content"]["features-h4"];
+textHeading[1].textContent = siteContent['main-content']['about-h4'];
+textHeading[2].textContent = siteContent['main-content']['services-h4'];
+textHeading[3].textContent = siteContent['main-content']['product-h4'];
+textHeading[4].textContent = siteContent['main-content']['vision-h4'];
+
+
+
+const featText = document.querySelectorAll('p');
+featText[0].textContent = siteContent['main-content']["features-content"];
+featText[1].textContent = siteContent['main-content']["about-content"];
+featText[2].textContent = siteContent['main-content']["services-content"];
+featText[3].textContent = siteContent['main-content']["product-content"];
+featText[4].textContent = siteContent['main-content']["vision-content"];
+
+
+
+// const contentHeading = document.querySelectorAll('h4');
+// contentHeading.forEach((element, index) => 
+//   element.textContent = siteContent['main-content'][`${index + 1}-h4`]
+// );
+
+//
+// featText.forEach((el, index) => {
+//   el.textContent = siteContent['main-content'][`${index + 1}`];
+// });
+
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+const info = document.querySelectorAll('.contact p');
+info[0].textContent = siteContent['contact']['address'];
+info[1].textContent = siteContent['contact']['phone'];
+info[2].textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
